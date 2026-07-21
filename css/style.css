@@ -1,25 +1,25 @@
 /* =========================================================
-   บ้านตะวัน ผับระยอง
+   บ้านตะวัน ผับระยอง (Dark Theme - Bar & Lounge Mood)
    (เปิด 19:30–02:00)
    ========================================================= */
 :root {
-  /* สีพื้นหลัง (Warm Light Palette) */
-  --bg-deep: #e9e9e9;         /* พื้นหลังหลัก - สีครีมอุ่นนวลผ่อนคลาย */
-  --bg-panel: #ffffff;        /* พื้นการ์ด/แผง - ขาวสะอาดตาเพื่อแยกเลเยอร์ */
-  --bg-panel-raised: #f1ebd9; /* พื้นหลังรูปภาพ - ครีมทองอ่อน */
-  --line: #e6dfd1;            /* เส้นขอบ - เทาน้ำตาลนวลๆ */
+  /* สีพื้นหลัง (Warm Dark Palette) */
+  --bg-deep: #121212;         /* พื้นหลังหลัก - ดำเข้มลึกนุ่มนวล */
+  --bg-panel: #1e1e1e;        /* พื้นการ์ด/แผง - ดำเทาแยกเลเยอร์ */
+  --bg-panel-raised: #282623; /* พื้นหลังรูปภาพ - ชาโคลอุ่น */
+  --line: #332f2b;            /* เส้นขอบ - น้ำตาลเทาเข้ม */
   
   /* สีไฮไลต์ (Accent Colors) */
-  --gold: #ffd27f;            /* ทองเข้ม/บรอนซ์ - ดูมีระดับบนพื้นขาว */
-  --gold-soft: #2a2727;       /* ทองเข้มสว่าง - ชัดเจนเมื่อเป็นข้อความ */
-  --ember: #d9531e;           /* ส้มอิฐ/เผ็ด - จุดสนใจ CTA */
-  --ember-soft: #c2410c;      /* ส้มเข้ม - อ่านง่าย */
+  --gold: #ffd27f;            /* ทองอำพัน - สว่างเด่นบนพื้นมืด */
+  --gold-soft: #e8e3d7;       /* ทองสว่างนวล - ข้อความและหัวข้อเด่น */
+  --ember: #ff5722;           /* ส้มเพลิง/เผ็ด - จุดสนใจ */
+  --ember-soft: #f97316;      /* ส้มอุ่น - ข้อความสถานะ */
   
   /* สีข้อความ (Typography Colors) */
-  --text-cream: #1a1818;      /* ข้อความหลัก - น้ำตาลเข้มเกือบดำ (Soft Black) */
-  --text-muted: #57534e;      /* ข้อความรอง - เทาน้ำตาล */
-  --text-faint: #a8a29e;      /* ข้อความจาง - เทาอ่อน */
-  --shadow-deep: rgba(28, 25, 23, 0.08); /* เงาละมุนนุ่มนวล */
+  --text-cream: #ebdfdf;      /* ข้อความหลัก - ขาวครีมอุ่น (สบายตา) */
+  --text-muted: #a8a29e;      /* ข้อความรอง - เทาอุ่น */
+  --text-faint: #968f8b;      /* ข้อความจาง - เทาเข้ม */
+  --shadow-deep: rgba(0, 0, 0, 0.5); /* เงาลึกสำหรับมิติ */
 
   /* ตัวอักษร */
   --font-display: "Prompt", serif;
@@ -61,13 +61,13 @@ body {
   color: var(--text-cream);
   font-family: var(--font-body);
   line-height: 1.6;
-  /* ปรับ Gradient ให้กระจายแสงทองอบอุ่นบางๆ จากด้านบน */
+  /* ปรับ Gradient ให้กระจายแสงทองอบอุ่นสลัวๆ จากด้านบน */
   background-image: radial-gradient(
       ellipse 900px 500px at 50% -10%,
-      rgba(184, 134, 11, 0.08),
+      rgba(243, 168, 51, 0.08),
       transparent 60%
     ),
-    linear-gradient(180deg, #f3efe6 0%, #f8f6f0 40%);
+    linear-gradient(180deg, #181716 0%, #121212 40%);
 }
 
 img {
@@ -84,7 +84,7 @@ button {
 }
 
 :focus-visible {
-  outline: 2px solid var(--gold-soft);
+  outline: 2px solid var(--gold);
   outline-offset: 3px;
 }
 
@@ -115,7 +115,7 @@ button {
 /* ========================= Hero ========================= */
 .hero {
   position: relative;
-  padding: 40px 0 30px;
+  padding: 50px 0 30px;
   text-align: center;
   overflow: hidden;
   border-bottom: 1px solid var(--line);
@@ -131,12 +131,17 @@ button {
 .hero__logo {
   width: 100%;
   height: 100%;
-  object-fit: cover; /* ทำให้รูปไม่เบี้ยว แม้รูปเดิมจะไม่ใช่จัตุรัส */
-  border-radius: 50%; /* สั่งทำเป็นวงกลม */
-  border: 3px solid var(--gold); /* กรอบสีทอง */
-  box-shadow: 0 8px 10px rgba(184, 134, 11, 0.2); /* เงาสีทองจางๆ เพิ่มความลอยเด่น */
+  object-fit: cover;
+  border-radius: 50%;
+  border: 3px solid var(--gold);
+  box-shadow: 0 0 20px rgba(243, 168, 51, 0.3); /* แสงโกลว์สีทองลอยเด่น */
   background: var(--bg-panel);
-  transition: transform 0.3s ease;
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.hero__logo-wrapper:hover .hero__logo {
+  transform: scale(1.05);
+  box-shadow: 0 0 28px rgba(243, 168, 51, 0.5);
 }
 
 .hero__mark {
@@ -149,23 +154,23 @@ button {
   font-family: var(--font-utility);
   letter-spacing: 0.32em;
   text-transform: uppercase;
-  font-size: 0.65rem;
+  font-size: 0.52rem;
   color: var(--gold-soft);
   margin: 0 0 10px;
 }
 
 .hero__title {
   font-family: var(--font-display);
-  font-size: clamp(2.2rem, 6vw, 4rem);
+  font-size: clamp(1.9rem, 6vw, 4rem);
   margin: 0 0 8px;
   color: var(--text-cream);
-  text-shadow: 0 2px 24px rgba(201, 162, 39, 0.25);
+  text-shadow: 0 0 20px rgba(243, 168, 51, 0.25);
 }
 
 .hero__subtitle {
   font-family: var(--font-body);
   color: var(--text-muted);
-  font-size: 0.9rem;
+  font-size: 0.85rem;
   margin: 0 0 30px;
 }
 
@@ -188,6 +193,7 @@ button {
   font-family: var(--font-utility);
   font-size: 0.88rem;
   color: var(--text-cream);
+  box-shadow: 0 4px 12px var(--shadow-deep);
 }
 
 .fact-pill svg {
@@ -201,37 +207,18 @@ button {
 }
 
 .fact-pill a:hover {
+  color: var(--gold-soft);
   text-decoration: underline;
 }
-
-/* .hero__cta {
-  display: inline-flex;
-  align-items: center;
-  gap: 10px;
-  background: linear-gradient(135deg, var(--gold) 0%, var(--ember) 130%);
-  color: #ffffff;
-  font-family: var(--font-utility);
-  font-weight: 600;
-  font-size: 1rem;
-  padding: 14px 30px;
-  border-radius: 999px;
-  text-decoration: none;
-  box-shadow: 0 10px 30px -8px rgba(210, 87, 42, 0.55);
-  transition: transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-.hero__cta:hover {
-  transform: translateY(-2px);
-  box-shadow: 0 14px 34px -6px rgba(210, 87, 42, 0.65);
-} */
 
 /* ========================= Sticky search / filter bar ========================= */
 .control-bar {
   position: sticky;
   top: 0;
   z-index: 40;
-  background: rgba(248, 246, 240, 0.88);
-  backdrop-filter: blur(10px);
+  background: rgba(18, 18, 18, 0.88); /* ดำเบลอแบบ Glassmorphism */
+  backdrop-filter: blur(12px);
+  -webkit-backdrop-filter: blur(12px);
   border-bottom: 1px solid var(--line);
   padding: 14px 0;
 }
@@ -258,7 +245,9 @@ button {
   padding: 12px 18px 12px 44px;
   color: var(--text-cream);
   font-family: var(--font-body);
-  font-size: 0.98rem;
+  font-size: 0.82rem;
+  outline: none;
+  transition: border-color 0.2s ease, box-shadow 0.2s ease;
 }
 
 .search-box input::placeholder {
@@ -267,13 +256,14 @@ button {
 
 .search-box input:focus {
   border-color: var(--gold);
+  box-shadow: 0 0 10px rgba(243, 168, 51, 0.2);
 }
 
 .chip-row {
   display: flex;
   gap: 8px;
   overflow-x: auto;
-  padding: 2px 20px 10px;
+  padding: 2px 20px 13px;
   scrollbar-width: thin;
 }
 
@@ -287,7 +277,7 @@ button {
 
 .chip {
   flex-shrink: 0;
-  background: transparent;
+  background: var(--bg-panel);
   border: 1px solid var(--line);
   color: var(--text-muted);
   border-radius: 999px;
@@ -300,15 +290,16 @@ button {
 }
 
 .chip:hover {
-  border-color: var(--gold-soft);
+  border-color: var(--gold);
   color: var(--text-cream);
 }
 
 .chip.is-active {
   background: var(--gold);
   border-color: var(--gold);
-  color: #17110a;
+  color: #121212;
   font-weight: 600;
+  box-shadow: 0 0 12px rgba(243, 168, 51, 0.4);
 }
 
 /* ========================= Menu sections ========================= */
@@ -334,9 +325,13 @@ main {
   flex-shrink: 0;
 }
 
+.menu-section__header svg .disc {
+  fill: rgb(72, 69, 69) !important;
+}
+
 .menu-section__title {
   font-family: var(--font-display);
-  font-size: clamp(1.3rem, 3vw, 1.7rem);
+  font-size: clamp(1.25rem, 3vw, 1.7rem);
   color: var(--gold-soft);
   margin: 0;
 }
@@ -378,15 +373,16 @@ main {
   background: var(--bg-panel);
   border: 1px solid var(--line);
   border-radius: var(--radius-m);
-  box-shadow: 0 2px 8px var(--shadow-deep);
+  box-shadow: 0 4px 12px var(--shadow-deep);
   overflow: hidden;
-  transition: border-color 0.2s ease, transform 0.2s ease;
+  transition: border-color 0.2s ease, transform 0.2s ease, box-shadow 0.2s ease;
 }
 
-/* .menu-card:hover {
-  border-color: var(--gold);
-  transform: translateY(-3px);
-} */
+.menu-card:hover {
+  /* border-color: var(--gold);
+  transform: translateY(-3px); */
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.7);
+}
 
 .menu-card__image {
   position: relative;
@@ -406,6 +402,11 @@ main {
   width: 100%;
   height: 100%;
   object-fit: cover;
+  transition: transform 0.3s ease;
+}
+
+.menu-card__image:hover img {
+  transform: scale(1.05);
 }
 
 .menu-card__zoom {
@@ -415,7 +416,8 @@ main {
   width: 28px;
   height: 28px;
   border-radius: 50%;
-  background: rgba(255, 255, 255, 0.85);
+  background: rgba(18, 18, 18, 0.75);
+  backdrop-filter: blur(4px);
   display: flex;
   align-items: center;
   justify-content: center;
@@ -441,7 +443,7 @@ main {
 .menu-card__name {
   font-family: var(--font-body);
   font-weight: 600;
-  font-size: 0.95rem;
+  font-size: 0.85rem;
   color: var(--text-cream);
   margin: 0 0 8px;
   min-height: 2.6em;
@@ -460,14 +462,14 @@ main {
 .menu-card__price {
   font-family: var(--font-utility);
   font-weight: 600;
-  font-size: 1rem;
+  font-size: 0.95rem;
   color: var(--gold-soft);
   letter-spacing: 0.02em;
 }
 
 /* --- ✨ การ์ดกรณีไม่มีรูป (แนวนอนยืดเต็มความกว้าง) --- */
 .menu-card.menu-card--no-image {
-  grid-column: 1 / -1; /* สั่งให้ยืดเต็มความกว้างแถวของ Grid */
+  grid-column: 1 / -1;
   width: 100%;
 }
 
@@ -481,7 +483,7 @@ main {
 
 .menu-card.menu-card--no-image .menu-card__name {
   margin: 0;
-  min-height: auto; /* ยกเลิกการล็อคความสูงขั้นต่ำ */
+  min-height: auto;
   flex: 1;
 }
 
@@ -515,11 +517,12 @@ main {
 .modal-overlay {
   position: fixed;
   inset: 0;
-  background: rgba(28, 25, 23, 0.65);
+  background: rgba(0, 0, 0, 0.85); /* ฉากหลังมืดเข้มเพื่อโฟกัสรูป */
+  backdrop-filter: blur(6px);
   display: flex;
   align-items: center;
   justify-content: center;
-  padding: 16px; /* ลด padding เล็กน้อยเพื่อให้มือถือจอเล็กมีพื้นที่แสดงผลมากขึ้น */
+  padding: 16px;
   z-index: 100;
   opacity: 0;
   pointer-events: none;
@@ -537,10 +540,11 @@ main {
   border-radius: var(--radius-m);
   max-width: 560px;
   width: 100%;
-  max-height: 90vh; /* 💡 ป้องกันไม่ให้ Modal สูงเกิน 90% ของหน้าจอ */
+  max-height: 90vh;
   display: flex;
   flex-direction: column;
   overflow: hidden;
+  box-shadow: 0 16px 40px rgba(0, 0, 0, 0.8);
   transform: scale(0.96);
   transition: transform 0.2s ease;
 }
@@ -550,20 +554,19 @@ main {
 }
 
 .modal-box__image {
-  /* 💡 ถอด aspect-ratio ออก และให้ยืดหยุ่นตามความสูงหน้าจอ */
   background: var(--bg-panel-raised);
   display: flex;
   align-items: center;
   justify-content: center;
   overflow: hidden;
-  max-height: calc(90vh - 70px); /* ลบพื้นที่ส่วน Footer ออก */
+  max-height: calc(90vh - 70px);
 }
 
 .modal-box__image img {
   width: 100%;
   height: auto;
   max-height: calc(90vh - 70px);
-  object-fit: contain; /* 💡 ปรับเป็น contain เพื่อให้เห็นรูปครบทั้งใบ ไม่ถูกตัดขอบ */
+  object-fit: contain;
   display: block;
 }
 
@@ -573,8 +576,9 @@ main {
   justify-content: space-between;
   gap: 12px;
   padding: 16px 20px;
-  background: var(--bg-panel); /* กำหนดพื้นหลังให้ชัดเจน */
-  flex-shrink: 0; /* ป้องกันไม่ให้ส่วนราคาถูกบีบ */
+  background: var(--bg-panel);
+  border-top: 1px solid var(--line);
+  flex-shrink: 0;
 }
 
 .modal-box__name {
@@ -597,17 +601,18 @@ main {
   height: 34px;
   border-radius: 50%;
   background: var(--gold);
-  stroke: #ffffff;
+  stroke: #121212;
   border: none;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
   z-index: 10;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.5);
 }
 
 .modal-close svg {
-  stroke: #17110a;
+  stroke: #121212;
 }
 
 .modal-inner {
@@ -635,6 +640,7 @@ main {
   transform: translateY(10px);
   transition: opacity 0.2s ease, transform 0.2s ease;
   z-index: 30;
+  box-shadow: 0 4px 16px rgba(0, 0, 0, 0.6);
 }
 
 .scroll-top.is-visible {
@@ -646,6 +652,7 @@ main {
 .scroll-top svg {
   width: 20px;
   height: 12px;
+  stroke: var(--gold);
 }
 
 /* ========================= Footer ========================= */
@@ -653,6 +660,7 @@ footer {
   border-top: 1px solid var(--line);
   padding: 40px 0 30px;
   margin-top: 30px;
+  background: #0a0a0a;
 }
 
 .footer__grid {

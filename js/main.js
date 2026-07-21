@@ -39,7 +39,7 @@
   }
 
   /* ---------- สร้าง chip กรองหมวดหมู่ ---------- */
-  function buildChips() {
+ function buildChips() {
     const allChip = document.createElement("button");
     allChip.className = "chip is-active";
     allChip.type = "button";
@@ -59,11 +59,48 @@
     chipRow.addEventListener("click", (e) => {
       const chip = e.target.closest(".chip");
       if (!chip) return;
+
       activeCategory = chip.dataset.category;
       chipRow
         .querySelectorAll(".chip")
         .forEach((c) => c.classList.toggle("is-active", c === chip));
+
+      // 1. เรนเดอร์เมนูตามหมวดที่เลือก
       render();
+
+      // 2. 🟢 สั่งให้หน้าจอเลื่อนไปที่ส่วนหัวหมวดหมู่ (menu-section__header)
+      if (activeCategory === "all") {
+        // หากกด "ทั้งหมด" ให้เด้งไปที่หมวดหมู่แรกที่เจอ
+        const firstSection = menuRoot.querySelector(".menu-section");
+        if (firstSection) {
+          scrollToHeader(firstSection);
+        }
+      } else {
+        // หากเลือกหมวดหมู่เฉพาะ ให้เด้งไปที่หมวดหมู่นั้นๆ
+        const targetSection = document.getElementById(`cat-${activeCategory}`);
+        if (targetSection) {
+          scrollToHeader(targetSection);
+        }
+      }
+    });
+  }
+
+  // 💡 ฟังก์ชันช่วยเลื่อนหน้าจอไปยังตำแหน่ง Header ของ Section แบบนุ่มนวล
+  function scrollToHeader(sectionEl) {
+    const headerEl = sectionEl.querySelector(".menu-section__header") || sectionEl;
+    
+    // คำนวณระยะติดขอบบน (Offset) หลบแถบ Control bar / Sticky bar ด้านบน
+    const controlBar = document.querySelector(".control-bar");
+    const offset = controlBar ? controlBar.offsetHeight + 10 : 70;
+
+    const bodyRect = document.body.getBoundingClientRect().top;
+    const elementRect = headerEl.getBoundingClientRect().top;
+    const elementPosition = elementRect - bodyRect;
+    const offsetPosition = elementPosition - offset;
+
+    window.scrollTo({
+      top: offsetPosition,
+      behavior: "smooth"
     });
   }
 
