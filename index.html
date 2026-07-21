@@ -1,0 +1,137 @@
+<!DOCTYPE html>
+<html lang="th">
+<head>
+<meta charset="UTF-8" />
+<meta name="viewport" content="width=device-width, initial-scale=1.0" />
+<title>บ้านตะวัน ผับระยอง | เมนูอาหาร</title>
+<meta name="description" content="เมนูอาหารบ้านตะวัน ผับระยอง เปิดทุกวัน 19:30-02:00 น. ถ.ราษฎร์บำรุง ต.เนินพระ อ.เมือง จ.ระยอง" />
+
+<link rel="preconnect" href="https://fonts.googleapis.com" />
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+<link href="https://fonts.googleapis.com/css2?family=Chonburi&family=Sarabun:wght@400;500;600;700&family=Prompt:wght@400;500;600&display=swap" rel="stylesheet" />
+
+<link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+<!-- SVG defs ใช้ร่วมกันทั้งหน้า (gradient ของลายเซ็นตะวันตกดิน) -->
+<svg width="0" height="0" style="position:absolute">
+  <defs>
+    <linearGradient id="sunGradient" x1="0" y1="0" x2="0" y2="1">
+      <stop offset="0%" stop-color="#f2cf6b" />
+      <stop offset="100%" stop-color="#d2572a" />
+    </linearGradient>
+  </defs>
+</svg>
+
+<header class="hero">
+  <div class="container">
+    <!-- <svg class="hero__mark sun-mark" viewBox="0 0 108 64" aria-hidden="true">
+      <line class="rays" x1="30" y1="6" x2="30" y2="16" />
+      <line class="rays" x1="54" y1="2" x2="54" y2="14" />
+      <line class="rays" x1="78" y1="6" x2="78" y2="16" />
+      <circle class="disc" cx="54" cy="40" r="22" clip-path="url(#horizonClip)" />
+      <clipPath id="horizonClip">
+        <rect x="0" y="0" width="108" height="40" />
+      </clipPath>
+      <line class="horizon" x1="0" y1="40" x2="108" y2="40" />
+    </svg> -->
+
+    <div class="hero__logo-wrapper">
+      <img src="images/menu/logo.jpg" alt="บ้านตะวัน ผับระยอง" class="hero__logo" />
+    </div>
+    <p class="hero__eyebrow">Rayong Pub &amp; Restaurant</p>
+    <h1 class="hero__title">บ้านตะวันผับระยอง</h1>
+    <p class="hero__subtitle">ไลฟ์สไตล์หลากหลายความสนุกที่บ้านตะวัน ผับ ระยอง</p>
+
+    <div class="hero__facts">
+      <span class="fact-pill">
+        <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="12" cy="12" r="9"/><path d="M12 7v5l3 3"/></svg>
+        19:30 – 02:00 น.
+      </span>
+      <span class="fact-pill">
+            <!-- <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            337/5 ถ.ราษฎร์บำรุง ต.เนินพระ อ.เมือง จ.ระยอง 21000 -->
+        <a href="https://www.google.com/maps/search/?api=1&query=337%2F5+%E0%B8%96.%E0%B8%A3%E0%B8%B2%E0%B8%A9%E0%B8%8E%E0%B8%A3%E0%B9%8C%E0%B8%9A%E0%B8%B3%E0%B8%A3%E0%B8%B8%E0%B8%87+%E0%B8%95.%E0%B9%80%E0%B8%99%E0%B8%B4%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0+%E0%B8%AD.%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87+%E0%B8%88.%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87" target="_blank" rel="noopener noreferrer">
+            <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2"><path d="M12 21s-7-6.2-7-11a7 7 0 0 1 14 0c0 4.8-7 11-7 11Z"/><circle cx="12" cy="10" r="2.5"/></svg>
+            337/5 ถ.ราษฎร์บำรุง ต.เนินพระ อ.เมือง จ.ระยอง 21000
+        </a>
+      </span>
+    </div>
+
+    <!-- <a href="#menu" class="hero__cta">
+      ดูเมนูทั้งหมด
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+    </a> -->
+  </div>
+</header>
+
+<div class="control-bar" id="controlBar">
+  <div class="container">
+    <div class="search-box">
+      <svg width="18" height="18" viewBox="0 0 24 24" fill="none" stroke-width="2"><circle cx="11" cy="11" r="7"/><path d="m21 21-4.3-4.3"/></svg>
+      <input type="text" id="searchInput" placeholder="ค้นหาเมนู เช่น ต้มยำ, ยำ, ข้าว..." autocomplete="off" />
+    </div>
+    <div class="chip-row" id="chipRow"></div>
+  </div>
+</div>
+
+<main id="menu" class="container">
+  <div id="menuRoot"></div>
+  <div class="empty-state" id="emptyState">
+    <svg width="52" height="30" viewBox="0 0 108 64" aria-hidden="true">
+      <line class="rays" x1="30" y1="6" x2="30" y2="16" stroke="#6c675e" stroke-width="2.5" stroke-linecap="round"/>
+      <line class="rays" x1="54" y1="2" x2="54" y2="14" stroke="#6c675e" stroke-width="2.5" stroke-linecap="round"/>
+      <line class="rays" x1="78" y1="6" x2="78" y2="16" stroke="#6c675e" stroke-width="2.5" stroke-linecap="round"/>
+      <circle cx="54" cy="40" r="22" fill="none" stroke="#6c675e" stroke-width="2" clip-path="url(#horizonClip)" />
+      <line x1="0" y1="40" x2="108" y2="40" stroke="#6c675e" stroke-width="2" />
+    </svg>
+    <p>ไม่พบเมนูที่ค้นหา ลองคำอื่นดูนะครับ</p>
+  </div>
+</main>
+
+<button class="scroll-top" id="scrollTopBtn" aria-label="เลื่อนขึ้นด้านบน">
+  <svg viewBox="0 0 24 12" fill="none" stroke="var(--gold)" stroke-width="2"><path d="M2 10 12 2l10 8"/></svg>
+</button>
+
+<!-- Modal ดูรูปเมนู -->
+<div class="modal-overlay" id="modalOverlay">
+  <div class="modal-inner">
+    <button class="modal-close" id="modalClose" aria-label="ปิด">
+      <svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke-width="2.5"><path d="M6 6l12 12M18 6 6 18"/></svg>
+    </button>
+    <div class="modal-box">
+      <div class="modal-box__image" id="modalImageWrap"></div>
+      <div class="modal-box__footer">
+        <span class="modal-box__name" id="modalName"></span>
+        <span class="modal-box__price" id="modalPrice"></span>
+      </div>
+    </div>
+  </div>
+</div>
+
+<footer>
+  <div class="container footer__grid">
+    <!-- <div class="footer__brand">
+      <svg class="sun-mark" viewBox="0 0 108 64" aria-hidden="true">
+        <line class="rays" x1="30" y1="6" x2="30" y2="16" />
+        <line class="rays" x1="54" y1="2" x2="54" y2="14" />
+        <line class="rays" x1="78" y1="6" x2="78" y2="16" />
+        <circle class="disc" cx="54" cy="40" r="22" clip-path="url(#horizonClip)" />
+        <line class="horizon" x1="0" y1="40" x2="108" y2="40" />
+      </svg>
+      <span class="footer__brand-name">บ้านตะวัน ผับระยอง</span>
+    </div>
+    <div class="footer__info">
+      เปิดทุกวัน 19:30 – 02:00 น.<br />
+      337/5 ถ.ราษฎร์บำรุง ต.เนินพระ อ.เมือง จ.ระยอง 21000<br />
+      <a href="https://www.google.com/maps/search/?api=1&query=337%2F5+%E0%B8%96.%E0%B8%A3%E0%B8%B2%E0%B8%A9%E0%B8%8E%E0%B8%A3%E0%B9%8C%E0%B8%9A%E0%B8%B3%E0%B8%A3%E0%B8%B8%E0%B8%87+%E0%B8%95.%E0%B9%80%E0%B8%99%E0%B8%B4%E0%B8%99%E0%B8%9E%E0%B8%A3%E0%B8%B0+%E0%B8%AD.%E0%B9%80%E0%B8%A1%E0%B8%B7%E0%B8%AD%E0%B8%87+%E0%B8%88.%E0%B8%A3%E0%B8%B0%E0%B8%A2%E0%B8%AD%E0%B8%87" target="_blank" rel="noopener">เปิดแผนที่ Google Maps</a>
+    </div> -->
+    <p class="footer__copy">&copy; 2026 บ้านตะวันผับระยอง</p>
+  </div>
+</footer>
+
+<script src="js/data.js"></script>
+<script src="js/main.js"></script>
+</body>
+</html>
