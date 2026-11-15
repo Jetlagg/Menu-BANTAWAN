@@ -1417,7 +1417,7 @@ const MENU_ITEMS = [
     id: "khao-phat-kung-jan-yai",
     category: "onedish",
     name: "ขัาวผัดกุ้งจานใหญ่",
-    price: 250,
+    price: 280,
     img: "",
   },
   {
