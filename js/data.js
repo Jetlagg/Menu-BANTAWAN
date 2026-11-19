@@ -47,7 +47,7 @@ const MENU_ITEMS = [
     id: "yum-tua-moo-krob",
     category: "recommended",
     name: "ตำถั่วหมูกรอบ",
-    price: 150,
+    price: 160,
     img: "images/menu/yum-tua-moo-krob.png",
   },
   {
