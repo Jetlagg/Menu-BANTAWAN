@@ -586,7 +586,7 @@ const MENU_ITEMS = [
     id: "yum-ruammit-talay",
     category: "yumtumlarb",
     name: "ยำรวมมิตรทะเล",
-    price: 150,
+    price: 160,
     img: "images/menu/yum-ruammit-talay.png",
   },
   {
