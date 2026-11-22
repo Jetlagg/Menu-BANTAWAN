@@ -159,7 +159,7 @@ const MENU_ITEMS = [
     id: "ordeuf-roon",
     category: "recommended",
     name: "ออร์เดิฟร้อน",
-    price: 300,
+    price: 350,
     img: "#",
   },
   {
@@ -337,7 +337,7 @@ const MENU_ITEMS = [
     id: "khao-krieb-tod",
     category: "snacks",
     name: "ข้าวเกรียบทอด",
-    price: 90,
+    price: 100,
     img: "images/menu/khao-krieb-tod.png",
   },
   {
@@ -365,7 +365,7 @@ const MENU_ITEMS = [
     id: "kung-haeng-thua-tod",
     category: "snacks",
     name: "กุ้งแห้ง+ถั่วทอด",
-    price: 150,
+    price: 160,
     img: "#",
   },
   {
@@ -651,50 +651,50 @@ const MENU_ITEMS = [
     name: "ปลาเส้นลวกจิ้ม",
     price: 150,
     img: "images/menu/pla-sen-luak-jim.png",
-},
-{
+  },
+  {
     id: "yum-ruammit-talay",
     category: "yumtumlarb",
     name: "ยำรวมมิตร",
     price: 160,
     img: "#",
   },
-{
+  {
     id: "yum-kana-goong-sod",
     category: "yumtumlarb",
     name: "ยำคะน้ากุ้งสด",
     price: 160,
     img: "#",
-},
-{
+  },
+  {
     id: "yum-takrai-goong-sod",
     category: "yumtumlarb",
     name: "ยำตะไคร้กุ้งสด",
     price: 160,
     img: "#",
-},
+  },
   {
     id: "yum-maeng-kap-prun",
     category: "yumtumlarb",
     name: "ยำแมงกะพรุน",
     price: 150,
     img: "#",
-},
-{
+  },
+  {
     id: "yum-muk-sod",
     category: "yumtumlarb",
     name: "ยำหมึกสด",
     price: 160,
     img: "#",
-},
-{
+  },
+  {
     id: "yum-nua-ma-kua",
     category: "yumtumlarb",
     name: "ยำเนื้อมะเขือเปาะ",
     price: 150,
     img: "#",
-},
-{
+  },
+  {
     id: "yum-tua-ploo",
     category: "yumtumlarb",
     name: "ยำถั่วพลู",
@@ -702,88 +702,95 @@ const MENU_ITEMS = [
     img: "images/menu/yum-tua-ploo.png",
   },
   {
-      id: "yum-pak-boong-krob",
-      category: "yumtumlarb",
-      name: "ยำผักบุ้งกรอบ",
-      price: 150,
-      img: "images/menu/yum-pak-boong-krob.png",
-    },
-    {
-        id: "yum-sam-krob",
-        category: "yumtumlarb",
-        name: "ยำสามกรอบ",
-        price: 160,
-        img: "#",
-    },
+    id: "yum-pak-boong-krob",
+    category: "yumtumlarb",
+    name: "ยำผักบุ้งกรอบ",
+    price: 150,
+    img: "images/menu/yum-pak-boong-krob.png",
+  },
   {
-      id: "yum-pla-dook-fu",
-      category: "yumtumlarb",
+    id: "yum-sam-krob",
+    category: "yumtumlarb",
+    name: "ยำสามกรอบ",
+    price: 160,
+    img: "#",
+  },
+  {
+    id: "yum-pla-dook-fu",
+    category: "yumtumlarb",
     name: "ยำปลาดุกฟู",
     price: 150,
     img: "#",
-},
-{
+  },
+  {
     id: "yum-goong-fu",
     category: "yumtumlarb",
     name: "ยำกุ้งฟู",
     price: 160,
     img: "images/menu/yum-goong-fu.png",
-},
-{
+  },
+  {
     id: "yum-mi-boran",
     category: "yumtumlarb",
     name: "ยำหมี่โบราณ",
     price: 150,
     img: "images/menu/yum-mi-boran.png",
-},
-{
+  },
+  {
     id: "yum-moo-yo",
     category: "yumtumlarb",
     name: "ยำหมูยอ",
     price: 150,
     img: "#",
-},
-{
+  },
+  {
     id: "yum-kai-yiew-ma",
     category: "yumtumlarb",
     name: "ยำไข่เยี่ยวม้า",
     price: 150,
     img: "#",
-},
-{
+  },
+  {
     id: "yum-kai-dao",
     category: "yumtumlarb",
     name: "ยำไข่ดาว",
     price: 120,
     img: "#",
-},
-{
+  },
+  {
     id: "yum-met-mamaoong",
     category: "yumtumlarb",
     name: "ยำเม็ดมะม่วง",
     price: 120,
     img: "#",
-},
-{
+  },
+  {
     id: "yum-tua-tod",
     category: "yumtumlarb",
     name: "ยำถั่วทอด",
     price: 100,
     img: "#",
-},
-{
+  },
+  {
     id: "kung-plaa",
     category: "yumtumlarb",
     name: "กุ้งพล่า",
-    price: 150,
+    price: 160,
     img: "#",
-},
-{
+  },
+  {
     id: "mu-plaa",
     category: "yumtumlarb",
     name: "หมูพล่า",
     price: 150,
     img: "images/menu/mu-plaa.png",
+  },
+  {
+      id: "moo-ma-now",
+      category: "yumtumlarb",
+    name: "หมูมะนาว",
+    price: 150,
+    img: "images/menu/moo-ma-now.jpg",
   },
   {
         id: "nam-tok-moo",
@@ -831,7 +838,7 @@ const MENU_ITEMS = [
     id: "lab-talay-muk",
     category: "yumtumlarb",
     name: "ลาบ-ทะเล-หมึก",
-    price: 150,
+    price: 160,
     img: "#",
 },
 {
@@ -894,7 +901,7 @@ const MENU_ITEMS = [
     id: "lab-pla-salmon",
     category: "yumtumlarb",
     name: "ลาบปลาแซลมอน",
-    price: 200,
+    price: 250,
     img: "#",
   },
   {
@@ -969,14 +976,14 @@ const MENU_ITEMS = [
     id: "en-khao-kai-tod",
     category: "friedgrilled",
     name: "เอ็นข้อไก่ทอด",
-    price: 150,
+    price: 160,
     img: "images/menu/en-khao-kai-tod.png",
   },
   {
     id: "pak-ped-tod",
     category: "friedgrilled",
     name: "ปากเป็ดทอด",
-    price: 150,
+    price: 160,
     img: "images/menu/pak-ped-tod.png",
   },
   {
@@ -1067,7 +1074,7 @@ const MENU_ITEMS = [
     id: "naem-see-khroeng-moo-thod",
     category: "friedgrilled",
     name: "แหนมซี่โครหมูทอด",
-    price: 150,
+    price: 160,
     img: "",
   },
   {
@@ -1081,14 +1088,14 @@ const MENU_ITEMS = [
     id: "kung-chup-paeng-thod",
     category: "friedgrilled",
     name: "กุ้งชุปแป้งทอด",
-    price: 150,
+    price: 160,
     img: "",
   },
   {
     id: "kung-tempura",
     category: "friedgrilled",
     name: "กุ้งเทมปุระ",
-    price: 150,
+    price: 160,
     img: "",
   },
   {
@@ -1137,7 +1144,7 @@ const MENU_ITEMS = [
     id: "pla-muek-daed-diew",
     category: "friedgrilled",
     name: "ปลาหมึกแดดเดียว",
-    price: 150,
+    price: 160,
     img: "",
   },
   {
@@ -1683,14 +1690,14 @@ const MENU_ITEMS = [
     id: "khao-khai-chiew",
     category: "onedish",
     name: "ข้าวไข่เจียว",
-    price: 70,
+    price: 90,
     img: "",
   },
   {
     id: "khao-khai-chiew-moo-sub-kung-sub",
     category: "onedish",
     name: "ข้าวไข่เจียวหมูสับ-กุ้งสับ",
-    price: 80,
+    price: 120,
     img: "",
   },
   {
