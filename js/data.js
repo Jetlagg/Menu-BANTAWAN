@@ -901,7 +901,7 @@ const MENU_ITEMS = [
     id: "lab-pla-salmon",
     category: "yumtumlarb",
     name: "ลาบปลาแซลมอน",
-    price: 250,
+    price: 260,
     img: "#",
   },
   {
