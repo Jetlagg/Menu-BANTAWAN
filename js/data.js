@@ -409,7 +409,7 @@ const MENU_ITEMS = [
     id: "mu-krob-kua-prik-kluea",
     category: "stirfry",
     name: "หมูกรอบคั่วพริกเกลือ",
-    price: 150,
+    price: 160,
     img: "images/menu/mu-krob-kua-prik-kluea.png",
   },
   {
