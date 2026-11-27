@@ -282,13 +282,6 @@ const MENU_ITEMS = [
     img: "#",
   },
   {
-    id: "moo-sam-chang-kua-prik-kluea",
-    category: "recommended",
-    name: "หมูสามชั้นคั่วพริกเกลือ",
-    price: 160,
-    img: "#",
-  },
-  {
     id: "man-bort",
     category: "recommended",
     name: "มันบด",
@@ -392,25 +385,11 @@ const MENU_ITEMS = [
 
   // ผัด
   {
-    id: "kapong-kua-prik-kluea",
-    category: "stirfry",
-    name: "เนื้อปลากะพงคั่วพริกเกลือ",
-    price: 190,
-    img: "images/menu/kapong-kua-prik-kluea.png",
-  },
-  {
     id: "mi-phad-phak-ka-ched-goong-sod",
     category: "stirfry",
     name: "หมี่ผัดผักกะเฉดกุ้งสด",
     price: 150,
     img: "images/menu/mi-phad-phak-ka-ched-goong-sod.png",
-  },
-  {
-    id: "mu-krob-kua-prik-kluea",
-    category: "stirfry",
-    name: "หมูกรอบคั่วพริกเกลือ",
-    price: 160,
-    img: "images/menu/mu-krob-kua-prik-kluea.png",
   },
   {
     id: "gung-phaat-kai-khem",
@@ -469,31 +448,10 @@ const MENU_ITEMS = [
     img: "#",
   },
   {
-    id: "talay-kua-prik-kluea",
-    category: "stirfry",
-    name: "ทะเลคั่วพริกเกลือ",
-    price: 190,
-    img: "#",
-  },
-  {
     id: "talay-phad-cha",
     category: "stirfry",
     name: "ทะเลผัดฉ่า",
     price: 200,
-    img: "#",
-  },
-  {
-    id: "mu-sam-chang-kua-prik-kluea",
-    category: "stirfry",
-    name: "หมูสามชั้นคั่วพริกเกลือ",
-    price: 160,
-    img: "#",
-  },
-  {
-    id: "gung-kua-prik-kluea",
-    category: "stirfry",
-    name: "กุ้งคั่วพริกเกลือ",
-    price: 180,
     img: "#",
   },
   {
@@ -566,21 +524,8 @@ const MENU_ITEMS = [
     price: 120,
     img: "#",
   },
-  {
-    id: "mu-dad-diao-kua-prik-kluea",
-    category: "stirfry",
-    name: "หมูแดดเดียวคั่วพริกเกลือ",
-    price: 150,
-    img: "#",
-  },
-  {
-    id: "nua-dad-diao-kua-prik-kluea",
-    category: "stirfry",
-    name: "เนื้อแดดเดียวคั่วพริกเกลือ",
-    price: 150,
-    img: "#",
-  },
-  
+
+
   // ยำ ตำ ลาบ
   {
     id: "yum-ruammit-talay",
@@ -1006,6 +951,41 @@ const MENU_ITEMS = [
     name: "สามชั้นทอดน้ำปลา",
     price: 150,
     img: "images/menu/sam-chan-tod-namplaa.png",
+  },
+  {
+    id: "mu-krob-kua-prik-kluea",
+    category: "friedgrilled",
+    name: "หมูกรอบคั่วพริกเกลือ",
+    price: 160,
+    img: "images/menu/mu-krob-kua-prik-kluea.png",
+  },
+  {
+    id: "kapong-kua-prik-kluea",
+    category: "friedgrilled",
+    name: "เนื้อปลากะพงคั่วพริกเกลือ",
+    price: 190,
+    img: "images/menu/kapong-kua-prik-kluea.png",
+  },
+  {
+    id: "moo-sam-chang-kua-prik-kluea",
+    category: "friedgrilled",
+    name: "หมูสามชั้นคั่วพริกเกลือ",
+    price: 160,
+    img: "#",
+  },
+  {
+    id: "talay-kua-prik-kluea",
+    category: "friedgrilled",
+    name: "ทะเลคั่วพริกเกลือ",
+    price: 190,
+    img: "#",
+  },
+  {
+    id: "gung-kua-prik-kluea",
+    category: "friedgrilled",
+    name: "กุ้งคั่วพริกเกลือ",
+    price: 180,
+    img: "#",
   },
   {
     id: "mu-dad-diao",
